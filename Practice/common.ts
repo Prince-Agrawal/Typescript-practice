@@ -89,27 +89,6 @@ let p1 : Person = {
     }
 }
 
-// GENERICS
-let addUID = <T extends object>(obj: T) => {
-    let Uid = Math.floor(Math.random()*100);
-
-    return {...obj , Uid};
-}
-let docOne = addUID({name: "Prince" , age: 20});
-console.log(docOne);
-
-//  with interfaces
-interface Resource<T>{
-    name: string,
-    age: number,
-    data: T
-}
-let myObj: Resource<string> = {
-    name: "Prince",
-    age: 20,
-    data: "Generic"
-};
-console.log(myObj);
 
 //ENUM
 
